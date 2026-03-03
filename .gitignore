@@ -1,5 +1,14 @@
 # Credentials & Tokens
 .env
+
+# Processed email files (may contain sensitive data from actual emails)
+Done/
+Needs_Action/
+Pending_Approval/
+Drafts/
+Plans/
+Rejected/
+Approved/
 Skills/gmail-watcher/assets/token.json
 Skills/gmail-watcher/assets/credentials.json
 email-mcp/.env
