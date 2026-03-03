@@ -1,0 +1,29 @@
+[
+  {
+    "timestamp": "2026-02-24T23:01:09.941Z",
+    "dry_run": false,
+    "action_type": "search_emails",
+    "actor": "claude",
+    "target": "in:inbox",
+    "result": "5 results"
+  },
+  {
+    "timestamp": "2026-02-24T23:02:07.571Z",
+    "dry_run": false,
+    "action_type": "draft_email",
+    "actor": "claude",
+    "target": "anilawaqar101@gmail.com",
+    "subject": "MCP Test Draft",
+    "result": "created",
+    "file": "DRAFT_2026-02-24T23-02-07_email.md"
+  },
+  {
+    "timestamp": "2026-02-24T23:04:09.887Z",
+    "dry_run": false,
+    "action_type": "send_email",
+    "actor": "claude",
+    "target": "anilawaqar101@gmail.com",
+    "subject": "MCP send_email Test",
+    "result": "sent"
+  }
+]

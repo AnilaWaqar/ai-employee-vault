@@ -1,0 +1,164 @@
+[
+  {
+    "timestamp": "2026-03-02T09:39:04.145734",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "timeout: Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"[name=\\\"login\\\"]\")\n    - waiting for\" https://www.facebook.com/two_step_verification/authentication/?encrypted_context=AWTZgIOp229oIW2JQz7Fwe6v588WuG9BrXpPT3nEGdPIc9yLl273bHsMGKYlhKo_rE9gc_-PHJkVB9_ulq4nbSstlBJ1uyy8vr3OBCCvzxV3UOAeYLDOcT…\" navigation to finish...\n    - navigated to \"https://www.facebook.com/two_step_verification/authentication/?encrypted_context=AWTZgIOp229oIW2JQz7Fwe6v588WuG9BrXpPT3nEGdPIc9yLl273bHsMGKYlhKo_rE9gc_-PHJkVB9_ulq4nbSstlBJ1uyy8vr3OBCCvzxV3UOAeYLDOcT…\"\n    - waiting for\" https://www.facebook.com/two_step_verification/two_factor/?encrypted_context=AWS-0IFWkecRKAAM2x_AawuzRxMq3wGEsyw3IDUQGayylPSmaNhN2u-i_00h94RbS4nte2TjprP6J-b_9naVhqIRweTadh9FXlqtaFstQVpCRRUJ8jP45UWkX7…\" navigation to finish...\n    - navigated to \"https://www.facebook.com/two_step_verification/two_factor/?encrypted_context=AWS-0IFWkecRKAAM2x_AawuzRxMq3wGEsyw3IDUQGayylPSmaNhN2u-i_00h94RbS4nte2TjprP6J-b_9naVhqIRweTadh9FXlqtaFstQVpCRRUJ8jP45UWkX7…\"\n",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T09:40:33.840378",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "timeout: Page.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"[name=\\\"login\\\"]\")\n",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T09:41:56.511294",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "error: EOF when reading a line",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T09:43:53.153971",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "failed_no_postbtn",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T09:45:11.409331",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "success",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T09:47:22.636010",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "success",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T09:53:01.357145",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "success",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T09:55:29.889415",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "success",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T09:58:17.504811",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "failed_no_postbtn",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T10:03:29.295562",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "failed_no_postbtn",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T10:05:48.262478",
+    "action_type": "facebook_post",
+    "actor": "facebook-poster",
+    "target": "https://www.facebook.com/damzel.anila",
+    "result": "success",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T10:07:54.655681",
+    "action_type": "instagram_post",
+    "actor": "instagram-poster",
+    "target": "instagram.com",
+    "result": "failed_no_newpost",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working!\n#AIEmployee #Automation #Python",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T10:08:58.976472",
+    "action_type": "instagram_post",
+    "actor": "instagram-poster",
+    "target": "instagram.com",
+    "result": "failed_no_newpost",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working!\n#AIEmployee #Automation #Python",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T10:13:11.138872",
+    "action_type": "instagram_post",
+    "actor": "instagram-poster",
+    "target": "instagram.com",
+    "result": "failed_no_newpost",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working!\n#AIEmployee #Automation #Python",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T10:14:18.312216",
+    "action_type": "instagram_post",
+    "actor": "instagram-poster",
+    "target": "instagram.com",
+    "result": "failed_no_newpost",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working!\n#AIEmployee #Automation #Python",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T10:16:44.047548",
+    "action_type": "instagram_post",
+    "actor": "instagram-poster",
+    "target": "instagram.com",
+    "result": "failed_no_newpost",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working!\n#AIEmployee #Automation #Python",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T10:20:38.057320",
+    "action_type": "instagram_post",
+    "actor": "instagram-poster",
+    "target": "instagram.com",
+    "result": "failed_no_sharebtn",
+    "content_preview": "🤖 AI Employee test post — Gold Tier Feature 2 working!\n#AIEmployee #Automation #Python",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-02T10:26:39.398957",
+    "action_type": "instagram_post",
+    "actor": "instagram-poster",
+    "target": "instagram.com",
+    "result": "success",
+    "content_preview": "AI Employee test post - Gold Tier Feature 2 working!\n#AIEmployee #Automation #Python",
+    "dry_run": false
+  }
+]

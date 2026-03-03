@@ -1,0 +1,27 @@
+{
+  "master-pipeline": {
+    "restarts": 0,
+    "last_restart": null,
+    "pid": 18636
+  },
+  "whatsapp-watcher": {
+    "restarts": 0,
+    "last_restart": "2026-03-03T08:53:40.916689",
+    "pid": 20084
+  },
+  "linkedin-poster": {
+    "restarts": 0,
+    "last_restart": null,
+    "pid": 17560
+  },
+  "orchestrator": {
+    "restarts": 0,
+    "last_restart": null,
+    "pid": 20492
+  },
+  "plan-creator": {
+    "restarts": 0,
+    "last_restart": null,
+    "pid": 12500
+  }
+}

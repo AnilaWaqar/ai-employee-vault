@@ -1,0 +1,65 @@
+[
+  {
+    "timestamp": "2026-03-03T00:54:23.562934",
+    "action_type": "tweet_post",
+    "actor": "twitter-poster",
+    "target": "twitter.com",
+    "result": "unauthorized: 401 Unauthorized\nUnauthorized",
+    "content_preview": "🤖 AI Employee test tweet — Gold Tier Feature 3 working! #20260303005422 #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-03T00:57:04.124195",
+    "action_type": "tweet_post",
+    "actor": "twitter-poster",
+    "target": "twitter.com",
+    "result": "unauthorized: 401 Unauthorized\nUnauthorized",
+    "content_preview": "🤖 AI Employee test tweet — Gold Tier Feature 3 working! #20260303005703 #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-03T02:53:03.400105",
+    "action_type": "tweet_post",
+    "actor": "twitter-poster",
+    "target": "twitter.com",
+    "result": "error: 402 Payment Required\nYour enrolled account [2028555851162882048] does not have any credits to fulfill this request.",
+    "content_preview": "🤖 AI Employee test tweet — Gold Tier Feature 3 working! #20260303025302 #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-03T03:00:39.184126",
+    "action_type": "tweet_post",
+    "actor": "twitter-poster",
+    "target": "x.com",
+    "result": "failed_no_composebox",
+    "content_preview": "AI Employee test tweet — Gold Tier Feature 3 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-03T03:16:41.449419",
+    "action_type": "tweet_post",
+    "actor": "twitter-poster",
+    "target": "x.com",
+    "result": "failed_no_composebox",
+    "content_preview": "AI Employee test tweet — Gold Tier Feature 3 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-03T04:02:28.162371",
+    "action_type": "tweet_post",
+    "actor": "twitter-poster",
+    "target": "x.com",
+    "result": "failed_no_composebox",
+    "content_preview": "AI Employee test tweet — Gold Tier Feature 3 working! #AIEmployee #Automation",
+    "dry_run": false
+  },
+  {
+    "timestamp": "2026-03-03T04:08:38.204247",
+    "action_type": "tweet_post",
+    "actor": "twitter-poster",
+    "target": "x.com",
+    "result": "success",
+    "content_preview": "AI Employee test tweet — Gold Tier Feature 3 working! #AIEmployee #Automation",
+    "dry_run": false
+  }
+]

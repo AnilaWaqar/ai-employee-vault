@@ -1,0 +1,21 @@
+[
+  {
+    "timestamp": "2026-03-01T21:21:09.926Z",
+    "dry_run": false,
+    "action_type": "draft_email",
+    "actor": "claude",
+    "target": "waqar.sheikh28@gmail.com",
+    "subject": "Invoice #3 - Web Design Project | Rs. 25,000",
+    "result": "created",
+    "file": "DRAFT_2026-03-01T21-21-09_email.md"
+  },
+  {
+    "timestamp": "2026-03-01T21:21:47.164Z",
+    "dry_run": false,
+    "action_type": "send_email",
+    "actor": "claude",
+    "target": "waqar.sheikh28@gmail.com",
+    "subject": "Invoice #3 - Web Design Project | Rs. 25,000",
+    "result": "sent"
+  }
+]
