@@ -1,5 +1,12 @@
 # Credentials & Tokens
 .env
+*.env
+.env.*
+credentials.json
+token.json
+*.session
+*.key
+*.pem
 
 # Processed email files (may contain sensitive data from actual emails)
 Done/
@@ -12,6 +19,9 @@ Approved/
 Skills/gmail-watcher/assets/token.json
 Skills/gmail-watcher/assets/credentials.json
 email-mcp/.env
+
+# Platinum Tier — allow sync folders (do NOT exclude)
+# Updates/, Signals/, In_Progress/ are intentionally tracked
 
 # Browser Sessions (contain login data)
 twitter_session/

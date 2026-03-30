@@ -1,8 +1,9 @@
 # AI Employee Vault — CLAUDE.md
 
 ## Project Overview
-This is the **Bronze Tier** of the AI Employee system.
-Claude acts as an AI Employee to read, process, draft, and send emails via Gmail automation.
+This is the **Platinum Tier** of the AI Employee system (Phase 3 — Git Vault Sync).
+Claude acts as an AI Employee to read, process, draft, and send emails via Gmail automation,
+with dual-agent (Cloud + Local) architecture synced via GitHub.
 
 ---
 
@@ -28,7 +29,20 @@ AI_Employee_Vault/
 ├── Done/                              # Completed / sent items
 ├── Rejected/                          # Rejected drafts
 ├── Plans/                             # Action plans created by inbox-processor
-└── Logs/                              # Pipeline logs + Claude activity logs
+├── Logs/                              # Pipeline logs + Claude activity logs
+│
+│── [Platinum Tier additions]
+├── Needs_Action/
+│   ├── email/                         # Cloud Agent picks up email tasks
+│   ├── whatsapp/                      # Local Agent picks up WhatsApp tasks
+│   └── social/                        # Cloud Agent picks up social tasks
+├── In_Progress/
+│   ├── cloud/                         # Tasks claimed by Cloud Agent
+│   └── local/                         # Tasks claimed by Local Agent
+├── Updates/                           # Cloud Agent writes activity here
+├── Signals/                           # Agent-to-agent comms (SYNC_ERROR etc.)
+└── Skills/
+    └── git-sync/                      # Git sync monitor skill + script
 ```
 
 ---
@@ -58,6 +72,7 @@ Sensitive emails skip drafting → go to `Pending_Approval/` for manual review.
 | gmail-watcher | `/gmail-watcher` | Start/monitor pipeline, report status |
 | inbox-processor | `/inbox-processor` | Process Needs_Action/, create drafts |
 | dashboard-updater | `/dashboard-updater` | Update Dashboard.md with current counts |
+| git-sync | `/git-sync` | Monitor vault sync status, detect conflicts |
 
 ---
 
@@ -79,6 +94,9 @@ Sensitive emails skip drafting → go to `Pending_Approval/` for manual review.
 - Never send emails without human approval — user must manually move to `Approved/`
 - Log every Claude action to `Logs/YYYY-MM-DD.md`
 - Never delete processed email IDs from `processed_ids.json`
+- Claim-by-move rule: first agent to move file from Needs_Action/<domain>/ to In_Progress/<agent>/ owns it
+- Never auto-resolve git conflicts — always escalate to human via Signals/SYNC_ERROR.md
+- Git sync runs every 5 minutes via Skills/git-sync/git_sync.py
 
 ---
 
