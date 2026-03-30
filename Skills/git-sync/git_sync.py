@@ -95,13 +95,26 @@ def sync_vault(vault: Path):
     """Pull latest, then push any local changes."""
     logger.info(f"Syncing vault: {vault}")
 
-    # 1. Pull with rebase
+    # 1. Stash any unstaged changes before pulling
+    stash = run_git(["stash"], vault)
+    stashed = "No local changes" not in stash.stdout and stash.returncode == 0
+
+    # 2. Pull with rebase
     pull = run_git(["pull", "--rebase", "origin", "main"], vault)
     if pull.returncode != 0:
         err = pull.stderr.strip()
         logger.error(f"Pull failed: {err}")
+        # Restore stash before giving up
+        if stashed:
+            run_git(["stash", "pop"], vault)
         write_signal(vault, f"Pull failed:\n```\n{err}\n```")
         return
+
+    # 3. Restore stashed changes
+    if stashed:
+        pop = run_git(["stash", "pop"], vault)
+        if pop.returncode != 0:
+            logger.warning(f"Stash pop had conflicts: {pop.stderr.strip()}")
 
     # 2. Check for local changes
     status = run_git(["status", "--porcelain"], vault)
