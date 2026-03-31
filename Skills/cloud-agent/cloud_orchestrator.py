@@ -1,6 +1,6 @@
 """
 cloud_orchestrator.py — Platinum Tier Phase 4
-Cloud Agent: watches Needs_Action/email/, drafts replies via Claude API,
+Cloud Agent: watches Needs_Action/email/, drafts replies via OpenAI API,
 creates approval files in Pending_Approval/ for Local Agent to review.
 
 NEVER sends emails directly — all sends require human/Local Agent approval.
@@ -9,7 +9,7 @@ Usage (Cloud VM):
   python cloud_orchestrator.py
 
 Environment variables required:
-  CLAUDE_API_KEY       — Anthropic API key
+  OPENAI_API_KEY       — OpenAI API key
   VAULT_PATH           — Override vault path (optional)
 
 PM2:
@@ -23,7 +23,7 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
-import anthropic
+from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -48,9 +48,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger("cloud_orchestrator")
 
-# ── Claude API ────────────────────────────────────────────────────────────────
-CLAUDE_API_KEY = os.getenv("CLAUDE_API_KEY")
-claude_client = anthropic.Anthropic(api_key=CLAUDE_API_KEY) if CLAUDE_API_KEY else None
+# ── OpenAI API ────────────────────────────────────────────────────────────────
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+openai_client = OpenAI(api_key=OPENAI_API_KEY) if OPENAI_API_KEY else None
 
 SYSTEM_PROMPT = """You are an AI Employee assistant.
 You read incoming email files and draft professional reply emails.
@@ -117,33 +117,30 @@ def claim_task(task_file: Path) -> bool:
 
 def draft_reply(task_file: Path) -> tuple[str, bool]:
     """
-    Call Claude API to draft a reply for the email.
+    Call OpenAI API to draft a reply for the email.
     Returns (draft_text, is_sensitive).
     """
     content = task_file.read_text(encoding="utf-8")
 
-    if not claude_client:
-        logger.warning("No CLAUDE_API_KEY — using placeholder draft")
-        return f"[PLACEHOLDER DRAFT — set CLAUDE_API_KEY]\n\nOriginal email: {task_file.name}", False
+    if not openai_client:
+        logger.warning("No OPENAI_API_KEY — using placeholder draft")
+        return f"[PLACEHOLDER DRAFT — set OPENAI_API_KEY in .env]\n\nOriginal email: {task_file.name}", False
 
     try:
-        response = claude_client.messages.create(
-            model="claude-sonnet-4-6",
+        response = openai_client.chat.completions.create(
+            model="gpt-4o-mini",
             max_tokens=1024,
-            system=SYSTEM_PROMPT,
             messages=[
-                {
-                    "role": "user",
-                    "content": f"Draft a reply to this email:\n\n{content}"
-                }
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": f"Draft a reply to this email:\n\n{content}"}
             ]
         )
-        draft = response.content[0].text.strip()
+        draft = response.choices[0].message.content.strip()
         is_sensitive = draft.upper().startswith("SENSITIVE")
         return draft, is_sensitive
 
     except Exception as e:
-        logger.error(f"Claude API error: {e}")
+        logger.error(f"OpenAI API error: {e}")
         return f"[DRAFT FAILED — API error: {e}]", False
 
 
