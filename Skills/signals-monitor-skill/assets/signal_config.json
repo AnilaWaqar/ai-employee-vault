@@ -1,0 +1,6 @@
+{
+  "signals_dir": "Signals",
+  "acknowledged_dir": "Signals/Acknowledged",
+  "health_check_interval_hours": 1,
+  "signal_types": ["HEALTH_CHECK", "CLOUD_DOWN", "APPROVAL_EXPIRED", "SYNC_CONFLICT", "TASK_FAILED"]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "local-agent-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "pending approvals dikhao",
+      "expected_output": "Claude should list all files in /Pending_Approval/ with details — sender, subject, action required"
+    },
+    {
+      "id": 2,
+      "prompt": "local agent kya kar raha hai?",
+      "expected_output": "Claude should check /In_Progress/local/, /Approved/, /Signals/ and report local agent current status"
+    },
+    {
+      "id": 3,
+      "prompt": "approved files process karo",
+      "expected_output": "Claude should check /Approved/ folder, execute pending approved tasks via orchestrator.py and move to /Done/"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "signals-monitor-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "check signals folder for any alerts",
+      "expected_output": "Claude should list all unread .md files in /Signals/, show type and message, move to Acknowledged/"
+    },
+    {
+      "id": 2,
+      "prompt": "koi agent alerts hain?",
+      "expected_output": "Claude should trigger signals-monitor-skill, check /Signals/ and report any CLOUD_DOWN, TASK_FAILED or other signals"
+    },
+    {
+      "id": 3,
+      "prompt": "cloud sent a signal",
+      "expected_output": "Claude should read the signal file, identify type, take appropriate action and acknowledge it"
+    }
+  ]
+}

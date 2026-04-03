@@ -1,0 +1,7 @@
+{
+  "updates_dir": "Updates",
+  "processed_dir": "Updates/processed",
+  "dashboard_file": "Dashboard.md",
+  "marker": "## Cloud Agent Updates",
+  "run_interval_hours": 1
+}

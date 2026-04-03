@@ -1,0 +1,20 @@
+{
+  "skill_name": "platinum-demo-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "run platinum demo",
+      "expected_output": "Claude should check Cloud VM, git sync, Odoo, signals, updates and print PASS/FAIL checklist for each component"
+    },
+    {
+      "id": 2,
+      "prompt": "sab theek chal raha hai?",
+      "expected_output": "Claude should trigger platinum-demo-skill and run full system health check across all Platinum components"
+    },
+    {
+      "id": 3,
+      "prompt": "offline resilience test karo",
+      "expected_output": "Claude should guide through the offline test scenario — send test email, verify cloud handles it, verify local picks up after reconnect"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill_name": "dual-dashboard-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "dashboard mein cloud updates merge karo",
+      "expected_output": "Claude should run dashboard_merger.py, read Updates/cloud_*.md files and merge into Dashboard.md under Cloud Agent Updates section"
+    },
+    {
+      "id": 2,
+      "prompt": "cloud activity dikhao dashboard mein",
+      "expected_output": "Claude should trigger dual-dashboard-skill, merge any pending updates from /Updates/ into Dashboard.md"
+    },
+    {
+      "id": 3,
+      "prompt": "sync dashboard",
+      "expected_output": "Claude should check /Updates/ folder, merge unprocessed cloud_*.md files into Dashboard.md and move them to /Updates/processed/"
+    }
+  ]
+}

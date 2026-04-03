@@ -14,14 +14,22 @@ description: >
 Monitor the Cloud Agent (cloud_orchestrator.py) health, report what it has
 drafted, detect if it is down, and surface signals to the human.
 
-## When To Use
+## Trigger Phrases
+Use this skill when user says:
 - "check cloud agent status"
 - "what did cloud draft?"
 - "cloud agent down" / "cloud offline"
 - "CLOUD_DOWN signal"
 - "what's in In_Progress/cloud?"
 - "cloud orchestrator not working"
-- Before approving any CLOUD_ draft files
+- "cloud kya kar raha hai"
+- "check cloud"
+
+## Input
+- /In_Progress/cloud/ folder contents
+- /Pending_Approval/ folder (CLOUD_ prefix files)
+- /Updates/cloud_activity.md (last activity)
+- /Signals/CLOUD_DOWN.md (if exists)
 
 ## Steps
 

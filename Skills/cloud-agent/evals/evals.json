@@ -1,0 +1,20 @@
+{
+  "skill_name": "cloud-agent",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "check cloud agent status",
+      "expected_output": "Claude should check In_Progress/cloud/, Pending_Approval/ for CLOUD_ files, and Updates/cloud_activity.md, then report health status"
+    },
+    {
+      "id": 2,
+      "prompt": "cloud agent down hai kya?",
+      "expected_output": "Claude should check Signals/CLOUD_DOWN.md and pm2 logs, report if cloud is online or offline"
+    },
+    {
+      "id": 3,
+      "prompt": "cloud ne kya draft kiya?",
+      "expected_output": "Claude should list all CLOUD_* files in Pending_Approval/ with details"
+    }
+  ]
+}

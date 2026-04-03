@@ -1,0 +1,7 @@
+{
+  "agent_role": "local",
+  "vault_path": "E:/HC/AI_Employee_Vault",
+  "watch_interval_seconds": 60,
+  "dry_run": false,
+  "whatsapp_local_only": true
+}

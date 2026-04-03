@@ -66,6 +66,41 @@ Built in tiers, each tier adding more capability and intelligence.
 
 ---
 
+### 💎 Platinum Tier
+**Status:** 🔲 Planned
+**Spec:** See `PLATINUM_TIER.md`
+
+**Scope:** Dual-Agent Architecture (Cloud + Local) synced via GitHub Git Vault
+
+**Capabilities:**
+- Phase 1 — Cloud VM Setup (AWS EC2 Free Tier, 24/7 uptime)
+- Phase 2 — Cloud VM Configuration (Python, PM2, Git, dependencies)
+- Phase 3 — Git Vault Sync (auto-sync every 5 min, both agents share vault)
+- Phase 4 — Cloud Agent (`cloud_orchestrator.py` — handles email + social tasks)
+- Phase 5 — Odoo Cloud Deployment (Odoo on EC2, accessible from anywhere)
+- Phase 6 — Local Agent (`local_orchestrator.py` — handles WhatsApp tasks)
+- Phase 7 — Dual Dashboard System (Cloud + Local status in Dashboard.md)
+- Phase 7.5 — Signals System (`/Signals/` for agent-to-agent communication)
+- Phase 8 — Platinum Demo Preparation (end-to-end live demo)
+
+**New Folders:**
+- `Needs_Action/email/` — Cloud Agent ke email tasks
+- `Needs_Action/whatsapp/` — Local Agent ke WhatsApp tasks
+- `Needs_Action/social/` — Cloud Agent ke social tasks
+- `In_Progress/cloud/` — Cloud Agent ne claim kiya
+- `In_Progress/local/` — Local Agent ne claim kiya
+- `Updates/` — Cloud Agent activity logs
+- `Signals/` — Agent-to-agent communication (SYNC_ERROR etc.)
+
+**Skills:** cloud-agent, local-agent, git-sync, claim-by-move, dual-dashboard, platinum-demo
+
+**Key Rules:**
+- Claim-by-move: pehla agent jo file move kare In_Progress/ mein, woh task ka malik
+- Git conflicts kabhi auto-resolve nahi honge — Signals/SYNC_ERROR.md mein escalate
+- .env, credentials, tokens kabhi Git mein push nahi honge
+
+---
+
 ## System Architecture
 
 ### Email File Flow (Bronze)

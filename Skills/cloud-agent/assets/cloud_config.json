@@ -1,0 +1,7 @@
+{
+  "agent_role": "cloud",
+  "vault_path": "/home/ubuntu/AI_Employee_Vault",
+  "cycle_interval": 120,
+  "max_tasks_per_hour": 20,
+  "dry_run": false
+}

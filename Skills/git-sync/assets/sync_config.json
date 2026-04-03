@@ -1,0 +1,7 @@
+{
+  "sync_interval_seconds": 300,
+  "vault_path_local": "E:/HC/AI_Employee_Vault",
+  "vault_path_cloud": "/home/ubuntu/AI_Employee_Vault",
+  "branch": "main",
+  "auto_resolve_conflicts": false
+}

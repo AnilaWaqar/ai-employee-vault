@@ -1,0 +1,14 @@
+{
+  "cloud_vm_ip": "13.200.252.166",
+  "odoo_port": 8069,
+  "dry_run": false,
+  "checks": [
+    "git_sync",
+    "odoo",
+    "signals",
+    "updates",
+    "in_progress",
+    "pending_approval",
+    "dashboard"
+  ]
+}

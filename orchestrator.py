@@ -33,6 +33,8 @@ DONE_DIR        = VAULT_PATH / "Done"
 LOGS_DIR        = VAULT_PATH / "Logs"
 DASHBOARD       = VAULT_PATH / "Dashboard.md"
 TOKEN_FILE      = VAULT_PATH / "Skills/gmail-watcher/assets/token.json"
+SIGNALS_DIR     = VAULT_PATH / "Signals"
+SIGNALS_ACK_DIR = VAULT_PATH / "Signals" / "Acknowledged"
 
 # Files handled by other scripts — orchestrator skip karega
 SKIP_PREFIXES = ("LINKEDIN_", "DRAFT_", "SENT_", "FAILED_")
@@ -171,6 +173,43 @@ def update_dashboard():
         log.warning(f"Dashboard update failed: {e}")
 
 
+# ── Signals Reader ────────────────────────────────────────────────────────────
+def read_signals():
+    """Cloud Agent ke signals /Signals/ se padho aur respond karo."""
+    SIGNALS_DIR.mkdir(parents=True, exist_ok=True)
+    SIGNALS_ACK_DIR.mkdir(parents=True, exist_ok=True)
+
+    for signal_file in SIGNALS_DIR.glob("*.md"):
+        try:
+            content = signal_file.read_text(encoding="utf-8")
+            name = signal_file.name
+
+            if "CLOUD_DOWN" in name:
+                log.warning("SIGNAL: Cloud Agent offline detected!")
+                audit("signal", name, "alert", "Cloud Agent DOWN")
+            elif "APPROVAL_EXPIRED" in name:
+                log.warning(f"SIGNAL: Approval expired — {name}")
+                audit("signal", name, "alert", "Approval expired")
+            elif "SYNC_CONFLICT" in name:
+                log.warning("SIGNAL: Git sync conflict — manual resolution needed!")
+                audit("signal", name, "alert", "Git conflict detected")
+            elif "TASK_FAILED" in name:
+                log.warning(f"SIGNAL: Task failed — {name}")
+                audit("signal", name, "alert", "Task failed on cloud")
+            elif "HEALTH_CHECK" in name:
+                log.info(f"SIGNAL: Cloud Agent alive — {name}")
+                audit("signal", name, "ok", "Health check received")
+            else:
+                log.info(f"SIGNAL: Unknown signal — {name}")
+
+            # Signal acknowledge karo
+            dest = SIGNALS_ACK_DIR / signal_file.name
+            shutil.move(str(signal_file), str(dest))
+
+        except Exception as e:
+            log.error(f"Signal read error ({signal_file.name}): {e}")
+
+
 # ── Process Approved/ ─────────────────────────────────────────────────────────
 def process_approved():
     APPROVED_DIR.mkdir(parents=True, exist_ok=True)
@@ -292,6 +331,7 @@ def run():
         cycle += 1
         log.info(f"--- Cycle {cycle} ---")
         try:
+            read_signals()
             process_approved()
             process_rejected()
             # Expiry check har 10th cycle pe (every ~5 min)

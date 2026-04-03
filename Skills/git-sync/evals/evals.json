@@ -1,0 +1,20 @@
+{
+  "skill_name": "git-sync",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "sync status check karo",
+      "expected_output": "Claude should run git status, check Updates/git_sync_activity.md, check Signals/SYNC_ERROR.md and report sync health"
+    },
+    {
+      "id": 2,
+      "prompt": "git sync fail ho gaya",
+      "expected_output": "Claude should check Signals/SYNC_ERROR.md for details, report error to human, suggest manual resolution steps"
+    },
+    {
+      "id": 3,
+      "prompt": "vault theek sync ho raha hai?",
+      "expected_output": "Claude should check last sync timestamp from git_sync_activity.md and confirm sync is active"
+    }
+  ]
+}

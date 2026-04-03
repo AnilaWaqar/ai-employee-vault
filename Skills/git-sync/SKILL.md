@@ -13,13 +13,21 @@ description: >
 Monitor the vault's GitHub sync health, detect conflicts or errors, and
 alert the human — never auto-resolve conflicts.
 
-## When To Use
+## Trigger Phrases
+Use this skill when user says:
 - "check sync status"
 - "git sync failed" / "push failed" / "pull failed"
 - "vault not syncing" / "cloud out of sync"
 - "is the vault up to date?"
 - "SYNC_ERROR signal"
-- Before running a Platinum phase that requires both agents in sync
+- "sync theek hai?"
+- "git conflict"
+
+## Input
+- Vault root git status
+- /Updates/git_sync_activity.md (last sync timestamp)
+- /Signals/SYNC_ERROR.md (if exists)
+- git log (last 3 commits)
 
 ## Steps
 
